@@ -6,19 +6,17 @@
     <title>Harshitha M. | Software Engineer & Operations Portfolio</title>
     
     <style>
-        /* Modern Pastel & Rose Gold CSS Variables */
         :root {
             --bg-light: #fdfaf7; /* Soft Cream */
             --bg-card: #ffffff; /* Clean White */
             --border-color: #f5e6e8; /* Soft Blush Border */
-            --text-primary: #2d2325; /* Deep Espresso White/Black */
+            --text-primary: #2d2325; /* Deep Espresso */
             --text-secondary: #7d6b6f; /* Muted Rose Grey */
             --primary-accent: #db7b8b; /* Elegant Dusty Rose */
             --secondary-accent: #e5a9b4; /* Pastel Rose Gold */
             --glow-color: rgba(219, 123, 139, 0.12);
         }
 
-        /* Smooth Reset and Global Settings */
         body {
             margin: 0;
             padding: 0;
@@ -29,7 +27,6 @@
             overflow-x: hidden;
         }
 
-        /* Soft Gradient Aesthetic Header */
         header {
             background: linear-gradient(135deg, #fff0f2 0%, #fdfaf7 100%);
             padding: 100px 8%;
@@ -47,7 +44,6 @@
             background: linear-gradient(to right, transparent, var(--primary-accent), var(--secondary-accent), transparent);
         }
 
-        /* Typography & Gradient Text Effects */
         .gradient-text {
             background: linear-gradient(to right, #db7b8b, #c37b9b);
             -webkit-background-clip: text;
@@ -77,7 +73,6 @@
             gap: 10px;
         }
 
-        /* Layout Structure via CSS Grid & Flexbox */
         main {
             max-width: 1100px;
             margin: 0 auto;
@@ -113,7 +108,6 @@
             transform: translateY(-2px);
         }
 
-        /* Aesthetic Grid Cards */
         .project-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -162,7 +156,6 @@
             line-height: 1.6;
         }
 
-        /* Interactive UI Buttons */
         .btn-action {
             background: linear-gradient(135deg, var(--primary-accent), #c36b7b);
             color: #ffffff;
@@ -181,7 +174,6 @@
             transform: translateY(-1px);
         }
 
-        /* Credentials Box Settings */
         .credential-box {
             background: #ffffff;
             border: 1px solid var(--border-color);
@@ -200,9 +192,7 @@
             font-size: 14.5px;
         }
 
-        .cred-item li {
-            margin-bottom: 10px;
-        }
+        .cred-item li { margin-bottom: 10px; }
 
         .label-badge {
             background: #fff0f2;
@@ -214,7 +204,6 @@
             border: 1px solid #f9dadf;
         }
 
-        /* Experience Elements */
         .exp-card {
             background: var(--bg-card);
             border: 1px solid var(--border-color);
@@ -223,7 +212,6 @@
             box-shadow: 0 10px 30px rgba(163, 118, 125, 0.04);
         }
 
-        /* Smooth Responsiveness for Mobile Viewports */
         @media (max-width: 768px) {
             h1 { font-size: 38px; }
             header { padding: 60px 5%; }
@@ -242,9 +230,9 @@
             </p>
             
             <div style="display: flex; gap: 12px; margin-top: 30px; flex-wrap: wrap; font-size: 13.5px;">
-                <span style="color: #4a3e40; background: #ffffff; padding: 8px 18px; border-radius: 30px; border: 1px solid var(--border-color); box-shadow: 0 2px 5px rgba(0,0,0,0.02);">📍 Bangalore, India</span>
-                <span style="color: #4a3e40; background: #ffffff; padding: 8px 18px; border-radius: 30px; border: 1px solid var(--border-color); box-shadow: 0 2px 5px rgba(0,0,0,0.02);">📧 Harshugowda199712@gmail.com</span>
-                <span style="color: #4a3e40; background: #ffffff; padding: 8px 18px; border-radius: 30px; border: 1px solid var(--border-color); box-shadow: 0 2px 5px rgba(0,0,0,0.02);">📞 7019412302</span>
+                <span style="color: #4a3e40; background: #ffffff; padding: 8px 18px; border-radius: 30px; border: 1px solid var(--border-color);">📍 Bangalore, India</span>
+                <span style="color: #4a3e40; background: #ffffff; padding: 8px 18px; border-radius: 30px; border: 1px solid var(--border-color);">📧 Harshugowda199712@gmail.com</span>
+                <span style="color: #4a3e40; background: #ffffff; padding: 8px 18px; border-radius: 30px; border: 1px solid var(--border-color);">📞 7019412302</span>
             </div>
         </div>
     </header>
@@ -264,7 +252,7 @@
 
         <section>
             <h2 style="margin-bottom: 5px;"><span style="color: var(--primary-accent);">🌸</span> Engineering & Applications Portfolio</h2>
-            <p style="color: var(--text-secondary); font-size: 14px; margin: 0 0 30px 0;">Interactive platforms built utilizing native scripting paradigms, state frameworks, and data persistence controls.</p>
+            <p style="color: var(--text-secondary); font-size: 14px; margin: 0 0 30px 0;">Interactive platforms built utilizing native scripting paradigms, state frameworks, data persistence controls, and security string auditing.</p>
             
             <div class="project-grid">
                 
@@ -313,13 +301,21 @@
                     <a href="https://harshi-beep.github.io/task-deadline-tracker/" target="_blank" class="btn-action">Launch Application ➔</a>
                 </div>
 
+                <div class="card" style="border: 1px solid #f3d1d6; background: linear-gradient(to bottom right, #ffffff, #fffafd);">
+                    <div>
+                        <span class="card-tag" style="color: #db7b8b; font-weight: 800;">🔒 Cybersecurity & Risk Auditing</span>
+                        <h3>6. Cyber-Shield: Password Analyzer & Link Auditor</h3>
+                        <p>Engineered an interactive asset security evaluation tool using custom Regex patterns to analyze string credentials and intercept potential threat inputs. Modeled directly after enterprise risk containment and compliance auditing logic.</p>
+                    </div>
+                    <a href="https://harshi-beep.github.io/cyber-shield/" target="_blank" class="btn-action" style="background: linear-gradient(135deg, #db7b8b, #b55c6c);">Launch Application ➔</a>
+                </div>
+
             </div>
         </section>
 
         <section>
             <h2><span style="color: var(--primary-accent);">💕</span> Academic Validations & Certifications</h2>
             <div class="credential-box">
-                
                 <div class="cred-item">
                     <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
                         <h3 style="margin: 0; color: #3d262a; font-size: 18px; font-weight: 700;">IIT / NPTEL National Examination Certifications</h3>
@@ -343,14 +339,12 @@
                         <li><strong>Foundations of User Experience (UX) Design:</strong> System workflows detailing user empathy maps, target definitions, and modern interface layout behaviors.</li>
                     </ul>
                 </div>
-
             </div>
         </section>
 
         <section>
             <h2><span style="color: var(--primary-accent);">🎀</span> Professional Career Track</h2>
             <div style="display: flex; flex-direction: column; gap: 25px;">
-                
                 <div class="exp-card">
                     <div style="display: flex; justify-content: space-between; font-weight: bold; flex-wrap: wrap; font-size: 15px; margin-bottom: 5px;">
                         <span style="color: #3d262a;">Office Assistant CSE — RNS Institute of Technology (RNSIT)</span>
@@ -366,7 +360,6 @@
                     </div>
                     <p style="color: #4a3e40; font-size: 13.5px; margin: 0;">3.6 Years of corporate experience driving technical digital asset threat identification. Audited active media infrastructure platforms and ran automated link extractions yielding a 90% drop in content compliance risks.</p>
                 </div>
-
             </div>
         </section>
 
