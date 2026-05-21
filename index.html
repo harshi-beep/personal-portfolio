@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harshitha M. | Software Engineer & Operations Portfolio</title>
+    
+    <style>
+        /* Modern Pastel & Rose Gold CSS Variables */
+        :root {
+            --bg-light: #fdfaf7; /* Soft Cream */
+            --bg-card: #ffffff; /* Clean White */
+            --border-color: #f5e6e8; /* Soft Blush Border */
+            --text-primary: #2d2325; /* Deep Espresso White/Black */
+            --text-secondary: #7d6b6f; /* Muted Rose Grey */
+            --primary-accent: #db7b8b; /* Elegant Dusty Rose */
+            --secondary-accent: #e5a9b4; /* Pastel Rose Gold */
+            --glow-color: rgba(219, 123, 139, 0.12);
+        }
+
+        /* Smooth Reset and Global Settings */
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-light);
+            font-family: system-ui, -apple-system, sans-serif;
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Soft Gradient Aesthetic Header */
+        header {
+            background: linear-gradient(135deg, #fff0f2 0%, #fdfaf7 100%);
+            padding: 100px 8%;
+            border-bottom: 1px solid var(--border-color);
+            position: relative;
+        }
+
+        header::after {
+            content: '';
+            position: absolute;
+            bottom: -1px;
+            left: 10%;
+            width: 80%;
+            height: 2px;
+            background: linear-gradient(to right, transparent, var(--primary-accent), var(--secondary-accent), transparent);
+        }
+
+        /* Typography & Gradient Text Effects */
+        .gradient-text {
+            background: linear-gradient(to right, #db7b8b, #c37b9b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 700;
+            font-size: 13px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        h1 {
+            margin: 10px 0 15px 0;
+            font-size: 52px;
+            font-weight: 800;
+            letter-spacing: -1px;
+            color: #3d262a;
+        }
+
+        h2 {
+            font-size: 22px;
+            color: #3d262a;
+            margin-top: 0;
+            margin-bottom: 25px;
+            letter-spacing: -0.5px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* Layout Structure via CSS Grid & Flexbox */
+        main {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 60px 8%;
+            display: flex;
+            flex-direction: column;
+            gap: 60px;
+        }
+
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .skill-pill {
+            background: #ffffff;
+            color: #b55c6c;
+            border: 1px solid #f3d1d6;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+            box-shadow: 0 2px 8px rgba(219, 123, 139, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .skill-pill:hover {
+            background: var(--primary-accent);
+            color: #ffffff;
+            border-color: var(--primary-accent);
+            box-shadow: 0 5px 15px var(--glow-color);
+            transform: translateY(-2px);
+        }
+
+        /* Aesthetic Grid Cards */
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            padding: 30px;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            box-shadow: 0 10px 30px rgba(163, 118, 125, 0.04);
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary-accent);
+            box-shadow: 0 15px 35px rgba(219, 123, 139, 0.12);
+        }
+
+        .card-tag {
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+            color: var(--primary-accent);
+            display: inline-block;
+        }
+
+        .card h3 {
+            color: #3d262a;
+            margin: 0 0 12px 0;
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        .card p {
+            color: var(--text-secondary);
+            font-size: 14px;
+            margin: 0 0 25px 0;
+            line-height: 1.6;
+        }
+
+        /* Interactive UI Buttons */
+        .btn-action {
+            background: linear-gradient(135deg, var(--primary-accent), #c36b7b);
+            color: #ffffff;
+            text-decoration: none;
+            padding: 11px 20px;
+            border-radius: 25px;
+            font-size: 13px;
+            font-weight: 600;
+            text-align: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(219, 123, 139, 0.2);
+        }
+
+        .btn-action:hover {
+            box-shadow: 0 8px 20px rgba(219, 123, 139, 0.35);
+            transform: translateY(-1px);
+        }
+
+        /* Credentials Box Settings */
+        .credential-box {
+            background: #ffffff;
+            border: 1px solid var(--border-color);
+            padding: 35px;
+            border-radius: 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 35px;
+            box-shadow: 0 10px 30px rgba(163, 118, 125, 0.04);
+        }
+
+        .cred-item ul {
+            margin: 12px 0 0 0;
+            padding-left: 20px;
+            color: #4a3e40;
+            font-size: 14.5px;
+        }
+
+        .cred-item li {
+            margin-bottom: 10px;
+        }
+
+        .label-badge {
+            background: #fff0f2;
+            color: var(--primary-accent);
+            font-size: 11px;
+            font-weight: bold;
+            padding: 5px 12px;
+            border-radius: 20px;
+            border: 1px solid #f9dadf;
+        }
+
+        /* Experience Elements */
+        .exp-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            padding: 25px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(163, 118, 125, 0.04);
+        }
+
+        /* Smooth Responsiveness for Mobile Viewports */
+        @media (max-width: 768px) {
+            h1 { font-size: 38px; }
+            header { padding: 60px 5%; }
+            main { padding: 40px 5%; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div style="max-width: 1100px; margin: 0 auto;">
+            <div class="gradient-text">BE Computer Science & Engineering Graduate</div>
+            <h1>Harshitha M.</h1>
+            <p style="margin: 0; font-size: 17px; color: var(--text-secondary); max-width: 750px; line-height: 1.8;">
+                Detail-oriented and analytical BE Graduate with a strong technical background spanning academic lab support and corporate process operations. Proven track record at the RNSIT CSE Department, where responsibilities included managing technical documentation, writing lab manuals, and structuring student infrastructure databases.
+            </p>
+            
+            <div style="display: flex; gap: 12px; margin-top: 30px; flex-wrap: wrap; font-size: 13.5px;">
+                <span style="color: #4a3e40; background: #ffffff; padding: 8px 18px; border-radius: 30px; border: 1px solid var(--border-color); box-shadow: 0 2px 5px rgba(0,0,0,0.02);">📍 Bangalore, India</span>
+                <span style="color: #4a3e40; background: #ffffff; padding: 8px 18px; border-radius: 30px; border: 1px solid var(--border-color); box-shadow: 0 2px 5px rgba(0,0,0,0.02);">📧 Harshugowda199712@gmail.com</span>
+                <span style="color: #4a3e40; background: #ffffff; padding: 8px 18px; border-radius: 30px; border: 1px solid var(--border-color); box-shadow: 0 2px 5px rgba(0,0,0,0.02);">📞 7019412302</span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+        <section>
+            <h2><span style="color: var(--primary-accent);">✨</span> Skills & Core Capabilities</h2>
+            <div class="skills-container">
+                <div class="skill-pill">Languages: JavaScript (ES6+), HTML5, CSS3, Python, Java</div>
+                <div class="skill-pill">Dev Tools: VS Code, Git, GitHub, Git Bash, Pages</div>
+                <div class="skill-pill">Engineering: DOM Manipulation, Event Handling, Web Storage API</div>
+                <div class="skill-pill">Architecture: Async Execution, State Management, CSS Grid & Flexbox</div>
+                <div class="skill-pill">Operations: MS Excel & Word Formatting, Database Systems</div>
+            </div>
+        </section>
+
+        <section>
+            <h2 style="margin-bottom: 5px;"><span style="color: var(--primary-accent);">🌸</span> Engineering & Applications Portfolio</h2>
+            <p style="color: var(--text-secondary); font-size: 14px; margin: 0 0 30px 0;">Interactive platforms built utilizing native scripting paradigms, state frameworks, and data persistence controls.</p>
+            
+            <div class="project-grid">
+                
+                <div class="card">
+                    <div>
+                        <span class="card-tag">Web Storage API & CRUD</span>
+                        <h3>1. PersistTask – Dynamic To-Do App</h3>
+                        <p>Engineered a task management web application using native JavaScript (ES6+). Implemented browser localStorage mechanisms ensuring customized task data seamlessly survives page refreshes and session closures.</p>
+                    </div>
+                    <a href="https://harshi-beep.github.io/todo-list/" target="_blank" class="btn-action">Launch Application ➔</a>
+                </div>
+
+                <div class="card">
+                    <div>
+                        <span class="card-tag" style="color: #b07080;">State Arrays & Matrix Logic</span>
+                        <h3>2. Tic-Tac-Toe Ultimate</h3>
+                        <p>Architected a 2-player interactive matrix layout utilizing advanced multi-dimensional evaluation blocks to compute win configurations instantly. Built secure turn-alternation tracking structures.</p>
+                    </div>
+                    <a href="https://harshi-beep.github.io/tic-tac-toe/" target="_blank" class="btn-action">Launch Application ➔</a>
+                </div>
+
+                <div class="card">
+                    <div>
+                        <span class="card-tag" style="color: #b07080;">Asynchronous Event Loops</span>
+                        <h3>3. OmniCalc & Clock Utility</h3>
+                        <p>Integrated async setInterval event pooling structures updating clock layouts accurately down to the hardware second. Developed calculator string evaluation pipelines directly in-browser.</p>
+                    </div>
+                    <a href="https://harshi-beep.github.io/calculator-clock/" target="_blank" class="btn-action">Launch Application ➔</a>
+                </div>
+
+                <div class="card">
+                    <div>
+                        <span class="card-tag">UI/UX Design Conversion</span>
+                        <h3>4. Figma Startup Landing Page</h3>
+                        <p>Translated high-fidelity startup layout designs into clean, semantic markup utilizing standard web alignments, Flexbox navigations, and structural multi-column CSS Grid features.</p>
+                    </div>
+                    <a href="https://harshi-beep.github.io/startup-landing-page/" target="_blank" class="btn-action">Launch Application ➔</a>
+                </div>
+
+                <div class="card">
+                    <div>
+                        <span class="card-tag">DOM Control & Forms</span>
+                        <h3>5. College & Office Deadline Tracker</h3>
+                        <p>Constructed a tracking utility processing custom operational user inputs. Features input data verification mechanisms, item addition nodes, and clean placeholder state handling.</p>
+                    </div>
+                    <a href="https://harshi-beep.github.io/task-deadline-tracker/" target="_blank" class="btn-action">Launch Application ➔</a>
+                </div>
+
+            </div>
+        </section>
+
+        <section>
+            <h2><span style="color: var(--primary-accent);">💕</span> Academic Validations & Certifications</h2>
+            <div class="credential-box">
+                
+                <div class="cred-item">
+                    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
+                        <h3 style="margin: 0; color: #3d262a; font-size: 18px; font-weight: 700;">IIT / NPTEL National Examination Certifications</h3>
+                        <span class="label-badge">MINISTRY OF EDUCATION, GOVT. OF INDIA</span>
+                    </div>
+                    <ul>
+                        <li><strong>Programming in Java:</strong> Awarded <span style="color: var(--primary-accent); font-weight: bold;">Elite + Silver Medal Status</span> (Score: 85%)</li>
+                        <li><strong>Effective Writing & Thesis Writing:</strong> Graduated with <span style="color: var(--primary-accent); font-weight: bold;">Elite Badges</span> (Scores: 72% & 70%)</li>
+                        <li><strong>Software Testing Methodologies:</strong> Granted <span style="color: var(--primary-accent); font-weight: bold;">Elite Credentials</span> (Score: 62%)</li>
+                        <li><strong>The Joy of Computing Using Python & Big Data Computing:</strong> Core Course Verification Cleared</li>
+                    </ul>
+                </div>
+
+                <div class="cred-item" style="border-top: 1px solid var(--border-color); padding-top: 30px;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
+                        <h3 style="margin: 0; color: #3d262a; font-size: 18px; font-weight: 700;">Google Professional Cloud Specializations</h3>
+                        <span class="label-badge">COURSERA VERIFIED</span>
+                    </div>
+                    <ul>
+                        <li><strong>Google Cybersecurity Professional Certificate:</strong> Comprehensive 9-Module system verification path covering Architecture Protection, Linux Operating Infrastructures, SQL Databases, and Security Scripting via Python.</li>
+                        <li><strong>Foundations of User Experience (UX) Design:</strong> System workflows detailing user empathy maps, target definitions, and modern interface layout behaviors.</li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+        <section>
+            <h2><span style="color: var(--primary-accent);">🎀</span> Professional Career Track</h2>
+            <div style="display: flex; flex-direction: column; gap: 25px;">
+                
+                <div class="exp-card">
+                    <div style="display: flex; justify-content: space-between; font-weight: bold; flex-wrap: wrap; font-size: 15px; margin-bottom: 5px;">
+                        <span style="color: #3d262a;">Office Assistant CSE — RNS Institute of Technology (RNSIT)</span>
+                        <span style="color: var(--text-secondary); font-weight: 500;">June 2025 - Present</span>
+                    </div>
+                    <p style="color: #4a3e40; font-size: 13.5px; margin: 0;">Digitized tracking workflows for 800+ engineering students, optimized institutional documentation timelines by 40%, and structured technical laboratory logs matching strict university guidelines.</p>
+                </div>
+
+                <div class="exp-card">
+                    <div style="display: flex; justify-content: space-between; font-weight: bold; flex-wrap: wrap; font-size: 15px; margin-bottom: 5px;">
+                        <span style="color: #3d262a;">Process New Associate — Aiplex Software Private Limited</span>
+                        <span style="color: var(--text-secondary); font-weight: 500;">Nov 2019 - May 2023</span>
+                    </div>
+                    <p style="color: #4a3e40; font-size: 13.5px; margin: 0;">3.6 Years of corporate experience driving technical digital asset threat identification. Audited active media infrastructure platforms and ran automated link extractions yielding a 90% drop in content compliance risks.</p>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer style="text-align: center; padding: 40px; color: var(--text-secondary); font-size: 12.5px; border-top: 1px solid var(--border-color); background: #fff0f2;">
+        &copy; 2026 Harshitha M. | Portfolio crafted using Semantic HTML5 & Responsive CSS3 Elements.
+    </footer>
+
+</body>
+</html>
